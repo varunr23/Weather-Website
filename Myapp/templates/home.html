@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>ACCU Weather</title>
+    <link rel="stylesheet" href="{% static 'css/stylee.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="#">Portfolio</a>
+            <a href="#">About</a>
+            <a href="{% url 'contact' %}">Contact</a>
+            <a href="#">Help</a>
+        </nav>
+        
+        <form action="{% url 'working' %}" method="get" class="search-bar">
+            <input id="city" name="city" type="text" placeholder="Search...">
+            <button><i class='bx bx-search'></i></button>
+            <button><i class="fa fa-map-marker"></i></button>
+        </form>
+    </header>
+    <div class="container">
+    <h1 class='text'>Welcome! <br><span class='text'>To My Weather Forecast</span></h1>
+                <h3 class='text'>This weather app provides current and forecasted temperature, humidity, pressure and descriptions for cities searched by users</h3>
+    </div>
+</body>
+</html>
